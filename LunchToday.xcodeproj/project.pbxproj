@@ -8,26 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		844DFE191FE034D10070223F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFE181FE034D10070223F /* AppDelegate.swift */; };
-		844DFE1B1FE034D10070223F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFE1A1FE034D10070223F /* ViewController.swift */; };
+		844DFE1B1FE034D10070223F /* FavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFE1A1FE034D10070223F /* FavoritesListViewController.swift */; };
 		844DFE1E1FE034D10070223F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844DFE1C1FE034D10070223F /* Main.storyboard */; };
 		844DFE201FE034D10070223F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844DFE1F1FE034D10070223F /* Assets.xcassets */; };
 		844DFE231FE034D10070223F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844DFE211FE034D10070223F /* LaunchScreen.storyboard */; };
 		844DFE2C1FE05A4F0070223F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFE2B1FE05A4F0070223F /* MapViewController.swift */; };
-		EB77D5758AE38597E768BA10 /* libPods-LunchToday.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 089AA69F5F43DE1A640FCEC7 /* libPods-LunchToday.a */; };
+		84A14E021FE692BE00894B35 /* PlacesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A14E011FE692BE00894B35 /* PlacesListViewController.swift */; };
+		84A14E061FE6996C00894B35 /* PlaceItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A14E041FE6996C00894B35 /* PlaceItemTableViewCell.swift */; };
+		84A14E071FE6996C00894B35 /* PlaceItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A14E051FE6996C00894B35 /* PlaceItemTableViewCell.xib */; };
+		84D67CB31FE6A79900992E56 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67CB21FE6A79900992E56 /* PlaceDetailViewController.swift */; };
+		84D67CB71FE6ABAB00992E56 /* VisualPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67CB61FE6ABAB00992E56 /* VisualPlace.swift */; };
+		84D67CB91FE6AD5500992E56 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67CB81FE6AD5500992E56 /* Product.swift */; };
+		84D67CBC1FE6C2AF00992E56 /* PosterUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67CBB1FE6C2AF00992E56 /* PosterUsersService.swift */; };
+		84D67CBE1FE6D1A400992E56 /* PosterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67CBD1FE6D1A400992E56 /* PosterModels.swift */; };
+		E5EFB4A56F38D49A4A0FD334 /* Pods_LunchToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FD3DB3B7505AE40D121D8B /* Pods_LunchToday.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089AA69F5F43DE1A640FCEC7 /* libPods-LunchToday.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LunchToday.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		362B302B1A3E1F0AEB2CFDD5 /* Pods-LunchToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchToday.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LunchToday/Pods-LunchToday.debug.xcconfig"; sourceTree = "<group>"; };
 		844DFE151FE034D10070223F /* LunchToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DFE181FE034D10070223F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		844DFE1A1FE034D10070223F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		844DFE1A1FE034D10070223F /* FavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewController.swift; sourceTree = "<group>"; };
 		844DFE1D1FE034D10070223F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		844DFE1F1FE034D10070223F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844DFE221FE034D10070223F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844DFE241FE034D10070223F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844DFE2B1FE05A4F0070223F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		84A14E011FE692BE00894B35 /* PlacesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListViewController.swift; sourceTree = "<group>"; };
+		84A14E041FE6996C00894B35 /* PlaceItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceItemTableViewCell.swift; sourceTree = "<group>"; };
+		84A14E051FE6996C00894B35 /* PlaceItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceItemTableViewCell.xib; sourceTree = "<group>"; };
+		84D67CB21FE6A79900992E56 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		84D67CB61FE6ABAB00992E56 /* VisualPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualPlace.swift; sourceTree = "<group>"; };
+		84D67CB81FE6AD5500992E56 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		84D67CBB1FE6C2AF00992E56 /* PosterUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterUsersService.swift; sourceTree = "<group>"; };
+		84D67CBD1FE6D1A400992E56 /* PosterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterModels.swift; sourceTree = "<group>"; };
 		C57DDDAA34EF1E58DCBADFB2 /* Pods-LunchToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchToday.release.xcconfig"; path = "Pods/Target Support Files/Pods-LunchToday/Pods-LunchToday.release.xcconfig"; sourceTree = "<group>"; };
+		C9FD3DB3B7505AE40D121D8B /* Pods_LunchToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LunchToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB77D5758AE38597E768BA10 /* libPods-LunchToday.a in Frameworks */,
+				E5EFB4A56F38D49A4A0FD334 /* Pods_LunchToday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,8 +79,12 @@
 		844DFE171FE034D10070223F /* LunchToday */ = {
 			isa = PBXGroup;
 			children = (
+				84D67CBA1FE6C23D00992E56 /* Services */,
+				84D67CB51FE6AB6100992E56 /* Models */,
+				84D67CB41FE6AA3D00992E56 /* Favorites */,
+				84D67CB11FE6A76F00992E56 /* PlaceDetail */,
+				84A14E031FE6994D00894B35 /* PlacesList */,
 				844DFE2A1FE035690070223F /* commons */,
-				844DFE1A1FE034D10070223F /* ViewController.swift */,
 				844DFE2B1FE05A4F0070223F /* MapViewController.swift */,
 			);
 			path = LunchToday;
@@ -82,10 +102,54 @@
 			name = commons;
 			sourceTree = "<group>";
 		};
+		84A14E031FE6994D00894B35 /* PlacesList */ = {
+			isa = PBXGroup;
+			children = (
+				84A14E011FE692BE00894B35 /* PlacesListViewController.swift */,
+				84A14E041FE6996C00894B35 /* PlaceItemTableViewCell.swift */,
+				84A14E051FE6996C00894B35 /* PlaceItemTableViewCell.xib */,
+			);
+			path = PlacesList;
+			sourceTree = "<group>";
+		};
+		84D67CB11FE6A76F00992E56 /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				84D67CB21FE6A79900992E56 /* PlaceDetailViewController.swift */,
+			);
+			name = PlaceDetail;
+			sourceTree = "<group>";
+		};
+		84D67CB41FE6AA3D00992E56 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				844DFE1A1FE034D10070223F /* FavoritesListViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		84D67CB51FE6AB6100992E56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84D67CB61FE6ABAB00992E56 /* VisualPlace.swift */,
+				84D67CB81FE6AD5500992E56 /* Product.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		84D67CBA1FE6C23D00992E56 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84D67CBB1FE6C2AF00992E56 /* PosterUsersService.swift */,
+				84D67CBD1FE6D1A400992E56 /* PosterModels.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		878FBCCFA0FB90A876AFD1CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				089AA69F5F43DE1A640FCEC7 /* libPods-LunchToday.a */,
+				C9FD3DB3B7505AE40D121D8B /* Pods_LunchToday.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,6 +227,7 @@
 			files = (
 				844DFE231FE034D10070223F /* LaunchScreen.storyboard in Resources */,
 				844DFE201FE034D10070223F /* Assets.xcassets in Resources */,
+				84A14E071FE6996C00894B35 /* PlaceItemTableViewCell.xib in Resources */,
 				844DFE1E1FE034D10070223F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,9 +259,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LunchToday/Pods-LunchToday-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -228,8 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844DFE1B1FE034D10070223F /* ViewController.swift in Sources */,
+				84A14E021FE692BE00894B35 /* PlacesListViewController.swift in Sources */,
+				84D67CB91FE6AD5500992E56 /* Product.swift in Sources */,
+				84D67CBE1FE6D1A400992E56 /* PosterModels.swift in Sources */,
+				84D67CB71FE6ABAB00992E56 /* VisualPlace.swift in Sources */,
+				844DFE1B1FE034D10070223F /* FavoritesListViewController.swift in Sources */,
+				84A14E061FE6996C00894B35 /* PlaceItemTableViewCell.swift in Sources */,
+				84D67CB31FE6A79900992E56 /* PlaceDetailViewController.swift in Sources */,
 				844DFE2C1FE05A4F0070223F /* MapViewController.swift in Sources */,
+				84D67CBC1FE6C2AF00992E56 /* PosterUsersService.swift in Sources */,
 				844DFE191FE034D10070223F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "0",
+    "api_key": "0",
+    "name": "Gurmaniya",
+    "icon": "",
+    "places": [
+      {
+        "number": 0,
+        "name": "Djuzeppe",
+        "address": "Днепр, пр.Героев, 3, ТЦ Кодак",
+        "phones": [
+          "0503402214",
+          "0973402214"
+        ],
+        "url": "http://gurmans.dp.ua/giuseppe/content/23-contact"
+      },
+      {
+        "number": 1,
+        "name": "Bavarius",
+        "address": "Днепр, ул.Глинки, 2, ТРЦ Мост-Сити центр",
+        "phones": [
+          "0503402214",
+          "0973402214"
+        ],
+        "url": "http://gurmans.dp.ua/bavarius/content/14-contact"
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "api_key": "1",
+    "name": "Confetti",
+    "icon": "",
+    "places": [
+      {
+        "number": 0,
+        "name": "Confetti",
+        "address": "Днепр, пр. Героев, 1м",
+        "phones": [
+          "0563785269",
+          "0675862036"
+        ],
+        "url": "http://confetti.in.ua/ru/menu/biznes_lanchi/"
+      },
+      {
+        "number": 1,
+        "name": "Confetti",
+        "address": "Днепр, ул. Писаржевского, 12",
+        "phones": [
+          "0675605168"
+        ],
+        "url": "http://confetti.in.ua/ru/menu/biznes_lanchi/"
+      }
+    ]
+  }
+]

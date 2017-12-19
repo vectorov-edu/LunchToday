@@ -10,42 +10,110 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Изранное-->
+        <!--Favorites List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LunchToday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FavoritesListViewController" customModule="LunchToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-ms-d0E">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tfc-ms-d0E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Me-sm-leO"/>
+                            <constraint firstItem="Tfc-ms-d0E" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5k2-c5-Gq7"/>
+                            <constraint firstItem="Tfc-ms-d0E" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jf2-fM-fvh"/>
+                            <constraint firstItem="Tfc-ms-d0E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="otw-3h-p5w"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Изранное" id="XNL-wS-7M1"/>
+                    <navigationItem key="navigationItem" id="5f8-ru-8X8"/>
+                    <connections>
+                        <segue destination="Ipd-CX-bdk" kind="show" id="isT-OI-gh6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769" y="827"/>
+            <point key="canvasLocation" x="1661.5999999999999" y="859.52023988005999"/>
         </scene>
-        <!--Заведения-->
+        <!--Places List View Controller-->
         <scene sceneID="SG6-MN-9E7">
             <objects>
-                <viewController id="bPq-Pt-XEq" sceneMemberID="viewController">
+                <viewController id="bPq-Pt-XEq" customClass="PlacesListViewController" customModule="LunchToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HlL-Qb-aZA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NQ1-s8-x51">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NQ1-s8-x51" firstAttribute="trailing" secondItem="5xT-E8-Vmw" secondAttribute="trailing" id="Js0-nx-tiQ"/>
+                            <constraint firstItem="NQ1-s8-x51" firstAttribute="leading" secondItem="5xT-E8-Vmw" secondAttribute="leading" id="Tm3-C4-wVq"/>
+                            <constraint firstItem="NQ1-s8-x51" firstAttribute="bottom" secondItem="5xT-E8-Vmw" secondAttribute="bottom" id="VMc-px-wbd"/>
+                            <constraint firstItem="NQ1-s8-x51" firstAttribute="top" secondItem="5xT-E8-Vmw" secondAttribute="top" id="eaI-X7-Lzh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5xT-E8-Vmw"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Заведения" id="Ki2-HX-sjw"/>
+                    <navigationItem key="navigationItem" id="2jL-fm-sC0"/>
+                    <connections>
+                        <outlet property="tableView" destination="NQ1-s8-x51" id="Men-1J-o7Q"/>
+                        <segue destination="Ipd-CX-bdk" kind="show" id="SVR-3e-NdQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1kG-rP-iUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769" y="179"/>
+            <point key="canvasLocation" x="1661.5999999999999" y="198.35082458770617"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ci1-Eg-0Dh">
+            <objects>
+                <viewController id="Ipd-CX-bdk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JFw-Ix-6T3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMz-MN-tKe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GMSNavSprites-0-3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="zf0-I3-nY7">
+                                        <rect key="frame" x="8" y="8" width="359" height="418"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zf0-I3-nY7" firstAttribute="centerX" secondItem="lMz-MN-tKe" secondAttribute="centerX" id="8XV-UO-9ST"/>
+                                    <constraint firstItem="zf0-I3-nY7" firstAttribute="leading" secondItem="lMz-MN-tKe" secondAttribute="leading" constant="8" id="f9G-pb-o2U"/>
+                                    <constraint firstAttribute="trailing" secondItem="zf0-I3-nY7" secondAttribute="trailing" constant="8" id="vV2-wh-pBc"/>
+                                    <constraint firstItem="zf0-I3-nY7" firstAttribute="top" secondItem="lMz-MN-tKe" secondAttribute="top" constant="8" id="zaz-bz-eDS"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lMz-MN-tKe" firstAttribute="bottom" secondItem="7Dh-42-a6P" secondAttribute="bottom" id="FJe-BN-YLe"/>
+                            <constraint firstItem="lMz-MN-tKe" firstAttribute="top" secondItem="7Dh-42-a6P" secondAttribute="top" id="QRh-01-UUB"/>
+                            <constraint firstItem="lMz-MN-tKe" firstAttribute="leading" secondItem="7Dh-42-a6P" secondAttribute="leading" id="RqC-41-1NW"/>
+                            <constraint firstItem="lMz-MN-tKe" firstAttribute="trailing" secondItem="7Dh-42-a6P" secondAttribute="trailing" id="wJM-Tx-b2A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Dh-42-a6P"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IBL-yR-wHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508" y="198"/>
         </scene>
         <!--Карта-->
         <scene sceneID="Ylt-8I-CFB">
             <objects>
-                <viewController id="kne-97-5Gz" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="kne-97-5Gz" customClass="MapViewController" customModule="LunchToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="imy-qH-Tl9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,9 +129,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3gV-5u-DLJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Карта" id="rAd-5J-pvm"/>
+                    <tabBarItem key="tabBarItem" title="Карта" image="MapIcon" id="rAd-5J-pvm"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="VlH-Hz-W0V" id="ryH-Bi-2PR"/>
+                        <outlet property="spinner" destination="VlH-Hz-W0V" id="l8M-fP-LB1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ij-qA-AmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -78,16 +146,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.74901960784313726" green="0.68627450980392157" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.68627450980392157" green="0.92941176470588238" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="kne-97-5Gz" kind="relationship" relationship="viewControllers" id="l6X-kY-VmC"/>
-                        <segue destination="bPq-Pt-XEq" kind="relationship" relationship="viewControllers" id="I1j-rL-Wvd"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ang-ee-nOj"/>
+                        <segue destination="y7w-YR-vjH" kind="relationship" relationship="viewControllers" id="I1j-rL-Wvd"/>
+                        <segue destination="D2x-u1-MAu" kind="relationship" relationship="viewControllers" id="ang-ee-nOj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aq-1t-8Kw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-497" y="-166"/>
+            <point key="canvasLocation" x="-111" y="197"/>
+        </scene>
+        <!--Заведения-->
+        <scene sceneID="xCU-4n-a6g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y7w-YR-vjH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Заведения" image="ListIcon" id="Ki2-HX-sjw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ymf-mp-Cuc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bPq-Pt-XEq" kind="relationship" relationship="rootViewController" id="lwk-T8-90s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsx-cy-iy2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="199"/>
+        </scene>
+        <!--Изранное-->
+        <scene sceneID="3kh-2n-ZBt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D2x-u1-MAu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Изранное" image="ic_favorite_white" id="XNL-wS-7M1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MqF-8I-JeG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BsB-RE-pz9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2h-f3-Mu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="860"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GMSNavSprites-0-3x.png" width="256" height="418"/>
+        <image name="ListIcon" width="24" height="24"/>
+        <image name="MapIcon" width="24" height="24"/>
+        <image name="ic_favorite_white" width="24" height="24"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="isT-OI-gh6"/>
+    </inferredMetricsTieBreakers>
 </document>

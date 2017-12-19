@@ -1,0 +1,6 @@
+framework module Pods_LunchToday {
+  umbrella header "Pods-LunchToday-umbrella.h"
+
+  export *
+  module * { export * }
+}
