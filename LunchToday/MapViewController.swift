@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps;
+import Alamofire
 
 class MapViewController: UIViewController {
 
@@ -25,16 +26,24 @@ class MapViewController: UIViewController {
         locationManager.requestAlwaysAuthorization()
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
-        locationManager.delegate = self
+        //locationManager.delegate = self
+        let location = locationManager.location!;
+        print("$$$ Location: \(location)")
 
+//        Alamofire.request("https://demo1163857.mockable.io").responseJSON {response in
+//            var json = response.result.value
+//            
+//            let users = try? JSONDecoder().decode([PosterUser].self, from: response.data!)
+//           // return users
+//        }
         
-        let asset = NSDataAsset(name: "MockData", bundle: Bundle.main)
-        let data = asset?.data
-        let users = try? JSONDecoder().decode(PosterUser.self, from: data!)
-        let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-        print(json)
+        //let asset = NSDataAsset(name: "MockData", bundle: Bundle.main)
+        //let data = asset?.data
+        //let users = try? JSONDecoder().decode(PosterUser.self, from: data!)
+        //let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+        //print(json)
         
-        let position = CLLocationCoordinate2D()
+        let position = location.coordinate
         let camera = GMSCameraPosition.camera(withTarget: position, zoom: zoomLevel)
         
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
@@ -45,6 +54,15 @@ class MapViewController: UIViewController {
         
         mapView.isHidden = true
         mapView.frame = view.frame
+        
+//        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
+//                                              longitude: location.coordinate.longitude,
+//                                              zoom: zoomLevel)
+        view.addSubview(mapView)
+        mapView.isHidden = false
+        mapView.camera = camera
+            
+        spinner.stopAnimating()
         
         spinner.tintColor = UIColor.black
         
