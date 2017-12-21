@@ -14,11 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    private let apiKeyMap = "AIzaSyD4Cl3PLyLu0YLsmYlkHBK_yRV0Yfjzblk"
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey(apiKeyMap)
+        GMSServices.provideAPIKey(GoogleGeoServices.apiKeyMap)
         
         return true
     }

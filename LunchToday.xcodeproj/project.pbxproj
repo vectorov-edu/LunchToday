@@ -16,6 +16,13 @@
 		84A14E021FE692BE00894B35 /* PlacesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A14E011FE692BE00894B35 /* PlacesListViewController.swift */; };
 		84A14E061FE6996C00894B35 /* PlaceItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A14E041FE6996C00894B35 /* PlaceItemTableViewCell.swift */; };
 		84A14E071FE6996C00894B35 /* PlaceItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A14E051FE6996C00894B35 /* PlaceItemTableViewCell.xib */; };
+		84B989E81FEB3CD000B4AA9A /* GoogleGeoServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B989E71FEB3CD000B4AA9A /* GoogleGeoServices.swift */; };
+		84B989EA1FEB428800B4AA9A /* AddressModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B989E91FEB428800B4AA9A /* AddressModels.swift */; };
+		84B989EC1FEB664500B4AA9A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B989EB1FEB664500B4AA9A /* Client.swift */; };
+		84B989F01FEBD45900B4AA9A /* ProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B989EF1FEBD45900B4AA9A /* ProductsListViewController.swift */; };
+		84B989F31FEBD6EF00B4AA9A /* ProductItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B989F11FEBD6EF00B4AA9A /* ProductItemTableViewCell.swift */; };
+		84B989F41FEBD6EF00B4AA9A /* ProductItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B989F21FEBD6EF00B4AA9A /* ProductItemTableViewCell.xib */; };
+		84B989F61FEBEB4900B4AA9A /* VisualPlaceModelCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B989F51FEBEB4900B4AA9A /* VisualPlaceModelCreator.swift */; };
 		84D67CB31FE6A79900992E56 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67CB21FE6A79900992E56 /* PlaceDetailViewController.swift */; };
 		84D67CB71FE6ABAB00992E56 /* VisualPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67CB61FE6ABAB00992E56 /* VisualPlace.swift */; };
 		84D67CB91FE6AD5500992E56 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D67CB81FE6AD5500992E56 /* Product.swift */; };
@@ -37,6 +44,13 @@
 		84A14E011FE692BE00894B35 /* PlacesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListViewController.swift; sourceTree = "<group>"; };
 		84A14E041FE6996C00894B35 /* PlaceItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceItemTableViewCell.swift; sourceTree = "<group>"; };
 		84A14E051FE6996C00894B35 /* PlaceItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceItemTableViewCell.xib; sourceTree = "<group>"; };
+		84B989E71FEB3CD000B4AA9A /* GoogleGeoServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeoServices.swift; sourceTree = "<group>"; };
+		84B989E91FEB428800B4AA9A /* AddressModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModels.swift; sourceTree = "<group>"; };
+		84B989EB1FEB664500B4AA9A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		84B989EF1FEBD45900B4AA9A /* ProductsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewController.swift; sourceTree = "<group>"; };
+		84B989F11FEBD6EF00B4AA9A /* ProductItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemTableViewCell.swift; sourceTree = "<group>"; };
+		84B989F21FEBD6EF00B4AA9A /* ProductItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemTableViewCell.xib; sourceTree = "<group>"; };
+		84B989F51FEBEB4900B4AA9A /* VisualPlaceModelCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualPlaceModelCreator.swift; sourceTree = "<group>"; };
 		84D67CB21FE6A79900992E56 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		84D67CB61FE6ABAB00992E56 /* VisualPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualPlace.swift; sourceTree = "<group>"; };
 		84D67CB81FE6AD5500992E56 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -79,6 +93,7 @@
 		844DFE171FE034D10070223F /* LunchToday */ = {
 			isa = PBXGroup;
 			children = (
+				84B989EE1FEBD41600B4AA9A /* ProductsList */,
 				84D67CBA1FE6C23D00992E56 /* Services */,
 				84D67CB51FE6AB6100992E56 /* Models */,
 				84D67CB41FE6AA3D00992E56 /* Favorites */,
@@ -112,6 +127,16 @@
 			path = PlacesList;
 			sourceTree = "<group>";
 		};
+		84B989EE1FEBD41600B4AA9A /* ProductsList */ = {
+			isa = PBXGroup;
+			children = (
+				84B989EF1FEBD45900B4AA9A /* ProductsListViewController.swift */,
+				84B989F11FEBD6EF00B4AA9A /* ProductItemTableViewCell.swift */,
+				84B989F21FEBD6EF00B4AA9A /* ProductItemTableViewCell.xib */,
+			);
+			path = ProductsList;
+			sourceTree = "<group>";
+		};
 		84D67CB11FE6A76F00992E56 /* PlaceDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,8 +156,12 @@
 		84D67CB51FE6AB6100992E56 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84D67CBD1FE6D1A400992E56 /* PosterModels.swift */,
 				84D67CB61FE6ABAB00992E56 /* VisualPlace.swift */,
 				84D67CB81FE6AD5500992E56 /* Product.swift */,
+				84B989E91FEB428800B4AA9A /* AddressModels.swift */,
+				84B989EB1FEB664500B4AA9A /* Client.swift */,
+				84B989F51FEBEB4900B4AA9A /* VisualPlaceModelCreator.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -141,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				84D67CBB1FE6C2AF00992E56 /* PosterUsersService.swift */,
-				84D67CBD1FE6D1A400992E56 /* PosterModels.swift */,
+				84B989E71FEB3CD000B4AA9A /* GoogleGeoServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -227,6 +256,7 @@
 			files = (
 				844DFE231FE034D10070223F /* LaunchScreen.storyboard in Resources */,
 				844DFE201FE034D10070223F /* Assets.xcassets in Resources */,
+				84B989F41FEBD6EF00B4AA9A /* ProductItemTableViewCell.xib in Resources */,
 				84A14E071FE6996C00894B35 /* PlaceItemTableViewCell.xib in Resources */,
 				844DFE1E1FE034D10070223F /* Main.storyboard in Resources */,
 			);
@@ -261,10 +291,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LunchToday/Pods-LunchToday-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -298,13 +330,19 @@
 			files = (
 				84A14E021FE692BE00894B35 /* PlacesListViewController.swift in Sources */,
 				84D67CB91FE6AD5500992E56 /* Product.swift in Sources */,
+				84B989F31FEBD6EF00B4AA9A /* ProductItemTableViewCell.swift in Sources */,
 				84D67CBE1FE6D1A400992E56 /* PosterModels.swift in Sources */,
+				84B989E81FEB3CD000B4AA9A /* GoogleGeoServices.swift in Sources */,
 				84D67CB71FE6ABAB00992E56 /* VisualPlace.swift in Sources */,
 				844DFE1B1FE034D10070223F /* FavoritesListViewController.swift in Sources */,
+				84B989EC1FEB664500B4AA9A /* Client.swift in Sources */,
+				84B989F61FEBEB4900B4AA9A /* VisualPlaceModelCreator.swift in Sources */,
 				84A14E061FE6996C00894B35 /* PlaceItemTableViewCell.swift in Sources */,
 				84D67CB31FE6A79900992E56 /* PlaceDetailViewController.swift in Sources */,
+				84B989EA1FEB428800B4AA9A /* AddressModels.swift in Sources */,
 				844DFE2C1FE05A4F0070223F /* MapViewController.swift in Sources */,
 				84D67CBC1FE6C2AF00992E56 /* PosterUsersService.swift in Sources */,
+				84B989F01FEBD45900B4AA9A /* ProductsListViewController.swift in Sources */,
 				844DFE191FE034D10070223F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

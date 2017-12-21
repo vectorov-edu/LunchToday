@@ -39,14 +39,14 @@ class PosterUser: Decodable {
     var places : [PosterPlace]?
     var products : [Product]?
     
-//    public init(id: String, api_key: String, name: String, icon: String, places: [PosterPlace], products: [Product]){
-//        self.id = id
-//        self.api_key = api_key
-//        self.name = name
-//        self.icon = icon
-//        self.places = places
-//        self.products = products
-//    }
+    public init(id: String, api_key: String, name: String, icon: String, places: [PosterPlace], products: [Product]){
+        self.id = id
+        self.api_key = api_key
+        self.name = name
+        self.icon = icon
+        self.places = places
+        self.products = products
+    }
 }
 
 //MARK: PosterSpot

@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps;
 import Alamofire
+import PromiseKit
 
 class MapViewController: UIViewController {
 
@@ -37,6 +38,7 @@ class MapViewController: UIViewController {
 //           // return users
 //        }
         
+        
         //let asset = NSDataAsset(name: "MockData", bundle: Bundle.main)
         //let data = asset?.data
         //let users = try? JSONDecoder().decode(PosterUser.self, from: data!)
@@ -55,6 +57,14 @@ class MapViewController: UIViewController {
         mapView.isHidden = true
         mapView.frame = view.frame
         
+        firstly{
+            PosterUsersService.GetUserMock()
+            //PosterUsersService.GetPostersUsers1()
+            }.then{[weak self] users in
+                self?.makeMarkers(users: users)
+            }.catch{error in
+                print(error)
+        }
 //        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
 //                                              longitude: location.coordinate.longitude,
 //                                              zoom: zoomLevel)
@@ -71,7 +81,21 @@ class MapViewController: UIViewController {
         //marker.Icon = UIImage.FromBundle("MeIcon");
         //marker.Map = _mapView;
         
-        
+    }
+    
+    private func makeMarkers(users: [PosterUser]){
+        for user in users {
+            for place in user.places! {
+            firstly{
+                GoogleGeoServices.GetLocationByAddress(address: place.address!, name: place.name!)
+            }
+            .then{ position -> Void in
+                let marker = GMSMarker.init(position: position)
+                marker.icon = UIImage(named: "default_marker.png")
+                marker.map = self.mapView
+            }
+            }
+        }
     }
 
 }

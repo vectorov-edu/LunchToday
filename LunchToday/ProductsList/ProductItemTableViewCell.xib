@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductItemCell" rowHeight="126" id="KGk-i7-Jjw" customClass="ProductItemTableViewCell" customModule="LunchToday" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="126"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="126"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZdD-RF-day">
+                        <rect key="frame" x="20" y="17" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ZdD-RF-day" secondAttribute="height" multiplier="1:1" id="JDj-8z-Xc0"/>
+                            <constraint firstAttribute="height" constant="90" id="dp7-sC-2ex"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gab-zg-Aal">
+                        <rect key="frame" x="115" y="86" width="225" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrx-3k-JEM">
+                        <rect key="frame" x="341" y="52" width="56" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.74994419639999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aE-cn-XP2">
+                        <rect key="frame" x="115" y="17" width="225" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gab-zg-Aal" firstAttribute="leading" secondItem="ZdD-RF-day" secondAttribute="trailing" constant="5" id="2gA-DC-HeJ"/>
+                    <constraint firstItem="4aE-cn-XP2" firstAttribute="leading" secondItem="ZdD-RF-day" secondAttribute="trailing" constant="5" id="6pT-9J-h4b"/>
+                    <constraint firstItem="ZdD-RF-day" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8V3-lE-lZ7"/>
+                    <constraint firstItem="Qrx-3k-JEM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="G5J-jm-SDk"/>
+                    <constraint firstItem="gab-zg-Aal" firstAttribute="bottom" secondItem="ZdD-RF-day" secondAttribute="bottom" id="Sk6-9v-SUI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gab-zg-Aal" secondAttribute="trailing" constant="60" id="VVK-MA-e2L"/>
+                    <constraint firstItem="4aE-cn-XP2" firstAttribute="top" secondItem="ZdD-RF-day" secondAttribute="top" id="ibu-U7-4GK"/>
+                    <constraint firstItem="ZdD-RF-day" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="kg8-vk-cyi"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4aE-cn-XP2" secondAttribute="trailing" constant="60" id="q1J-dr-qf7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Qrx-3k-JEM" secondAttribute="trailing" constant="3" id="rdQ-oT-iFu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="price" destination="Qrx-3k-JEM" id="Ijz-eS-O9K"/>
+                <outlet property="productCategory" destination="gab-zg-Aal" id="1Bj-gr-Whf"/>
+                <outlet property="productImage" destination="ZdD-RF-day" id="7b3-Mk-LUi"/>
+                <outlet property="productName" destination="4aE-cn-XP2" id="t64-Rv-ZrS"/>
+            </connections>
+            <point key="canvasLocation" x="75" y="93"/>
+        </tableViewCell>
+    </objects>
+</document>

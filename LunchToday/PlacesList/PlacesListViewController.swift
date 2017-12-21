@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import PromiseKit
 
 class PlacesListViewController: UIViewController {
     
@@ -22,22 +23,27 @@ class PlacesListViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        DispatchQueue.global(qos: .utility).async {
-            self.InitDataSource()
+        DispatchQueue.global(qos: .utility).async {[weak self] in
+            self?.InitDataSource()
         }
     }
     
     private func InitDataSource()
     {
-//        var usersList = PosterUsersDal.GetPosterUsers();
-//        var visualPlaceslist = VisualPlaceModelCreator().GetPlaces(usersList);
-//
-//        DispatchQueue.main.async {
-//            tableView.DataSource = self //PlacesCollectionDataSource(visualPlaceslist, GoToDetailPlace);
-//        }
+        PosterUsersService.GetUserMock() //.GetPosterUsers();
+        .then{[weak self] usersList in
+            return Promise<Void> { _,_ in
+            self?.placesList = VisualPlaceModelCreator().GetPlaces(posterUsers: usersList);
+
+            DispatchQueue.main.async{[weak self] in
+                guard let slf = self else {return}
+                slf.tableView.dataSource = slf //PlacesCollectionDataSource(visualPlaceslist, GoToDetailPlace);
+            }
+            }
+        }
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -45,7 +51,7 @@ class PlacesListViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
 
